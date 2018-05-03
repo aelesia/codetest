@@ -1,0 +1,21 @@
+<div class='container'>
+
+<p>
+<strong>ID:</strong>
+<%= @student.id %>
+</p>
+
+<p>
+<strong>Name:</strong>
+<%= @student.name %>
+</p>
+
+<p>
+<strong>Faculty:</strong>
+<%= @student.faculty %>
+</p>
+
+<div><%= link_to 'Download PDF', @student.id.to_s + '.pdf' %></div>
+<div><%= link_to 'Back', 'javascript:history.back()' %></div>
+
+</div>
