@@ -1,31 +1,11 @@
+
 <div class="container">
-	<div>
-		<div class="page-header">
-            <h1><%= @student.name %></h1>
-		</div>
-		<div class="row">
-			<div class="col-xs-4">
-				<b>Student No.</b>
-			</div>
-			<div class="col-xs-8">
-				<%= @student.student_number %>
-		  	</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-4">
-				<b>Faculty</b>
-			</div>
-			<div class="col-xs-8">
-                <%= @student.faculty %>
-			</div>
-		</div>
-	</div>
+	<%= render 'details' %> 
 	<br/>
-    <div>
-        <a href=<%=@student.student_number.to_s + '.pdf'%> class="btn btn-primary" role="button">
-            <span class="glyphicon glyphicon-download-alt"></span>
-            <span>&nbsp; Download PDF</span>
-        </a>
+	<div>
+		<a href=<%=@student.student_number.to_s + '.pdf'%> class="btn btn-primary" role="button">
+			<span class="glyphicon glyphicon-download-alt"></span>
+			<span>&nbsp; Download PDF</span>
+		</a>
 	</div>
-	<div id="qrcode"></div>
 </div>
