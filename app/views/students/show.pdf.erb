@@ -1,9 +1,8 @@
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <%= wicked_pdf_stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= wicked_pdf_javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= wicked_pdf_javascript_include_tag 'qrcode.min', 'data-turbolinks-track': 'reload' %>
   </head>
   
   <body>
@@ -13,7 +12,7 @@
       </div>
       <div class="row">
         <div class="col-xs-4">
-          <b>Student No.</b>
+          <b>Student Number</b>
         </div>
         <div class="col-xs-8">
           <%= @student.student_number %>
@@ -21,7 +20,7 @@
       </div>
       <div class="row">
         <div class="col-xs-4">
-          <b>Faculty</b>
+          <b>Faculty:</b>
         </div>
         <div class="col-xs-8">
           <%= @student.faculty %>

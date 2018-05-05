@@ -5,8 +5,7 @@ class StudentsController < ApplicationController
             format.html
             format.pdf do
                 render pdf: "Your_filename",
-                template: "/students/template.erb",
-                layout: 'pdf.erb'
+                template: "/students/show.pdf.erb"
             end
         end
     end
