@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180505044843) do
+ActiveRecord::Schema.define(version: 20180505071017) do
 
   create_table "students", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.string "faculty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "student_id"
+    t.string "student_number"
+    t.index ["student_number"], name: "index_students_on_student_number", unique: true
   end
 
 end

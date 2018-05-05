@@ -2,7 +2,7 @@
 	<h1>Students</h1>     
   <div class="list-group">
     <% @students.each do |student| %>
-      <a href=<%=student_path(student.student_id)%> class="list-group-item list-group-item-action"><%=student.name%></a>
+      <a href=<%=student_path(student.student_number)%> class="list-group-item list-group-item-action"><%=student.name%></a>
     <% end %>
 	</div>
 </div>

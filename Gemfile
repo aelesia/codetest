@@ -35,6 +35,8 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 #Bootstrap for prettiness
 gem 'bootstrap-sass', '~> 3.3.7'
+#JQuery
+gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
