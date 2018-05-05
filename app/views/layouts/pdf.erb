@@ -1,27 +1,45 @@
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
   </head>
-    
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <h3><%= @student.id %></h3>
-        <h3><%= @student.name %></h3>
-        <h3><%= @student.faculty %></h3>
-      </div>
-    </div>
-  </div>
-
-  <div id="qrcode"></div>
   
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1><%= @student.name %></h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <b>Student ID</b>
+        </div>
+        <div class="col-xs-9">
+          <%= @student.student_id %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <b>Faculty</b>
+        </div>
+        <div class="col-xs-9">
+          <%= @student.faculty %>
+        </div>
+      </div>
+      
+      <br/>
+      <div id="qrcode"></div>
+
+    </div>  
   </body>
 
   <script type="text/javascript">
-    var url = "http://localhost:3000/students/<%= @student.id %>";
-    new QRCode(document.getElementById("qrcode"), url);
+    var url = "http://localhost:3000/students/<%= @student.student_id %>";
+    new QRCode(document.getElementById("qrcode"), {
+      width: 128,
+      height: 128, 
+      text : url
+    });
   </script>
 </html>

@@ -32,8 +32,9 @@ gem 'jbuilder', '~> 2.5'
 
 #PDF Generation
 gem 'wicked_pdf'
-#Dependency for wicked_pdf
 gem 'wkhtmltopdf-binary'
+#Bootstrap for prettiness
+gem 'bootstrap-sass', '~> 3.3.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

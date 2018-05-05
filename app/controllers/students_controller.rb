@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
     def show
-        @student = Student.find(params[:id])
+        @student = Student.find_by(student_id: params[:id])
         respond_to do |format|
             format.html
             format.pdf do
