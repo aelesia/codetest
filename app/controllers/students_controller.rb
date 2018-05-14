@@ -4,8 +4,9 @@ class StudentsController < ApplicationController
         respond_to do |format|
             format.html
             format.pdf do
-                render pdf: "Your_filename",
-                template: "/students/show.pdf.erb"
+                render pdf: @student.student_number+"_"+@student.name,
+                template: "/students/show.pdf.erb",
+                layout: "pdf.erb"
             end
         end
     end

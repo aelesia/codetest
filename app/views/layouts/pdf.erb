@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <%= wicked_pdf_stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= wicked_pdf_javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= wicked_pdf_javascript_include_tag 'qrcode.min', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+    <%= yield %>
+  </body>
+</html>
